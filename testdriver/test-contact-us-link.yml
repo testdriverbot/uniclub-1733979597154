@@ -1,0 +1,23 @@
+version: 4.1.30
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Assert that the "Contact Us" link is visible in the footer.
+    commands:
+      - command: scroll-until-text
+        text: Contact Us
+        direction: down
+      - command: assert
+        expect: the "Contact Us" link is visible in the footer
+  - prompt: Click on the "Contact Us" link.
+    commands:
+      - command: hover-text
+        text: Contact Us
+        description: contact us link in the footer
+        action: click
+  - prompt: >-
+      Assert that the Contact Us page loads successfully.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: the "Contact Us" page displays contact details
