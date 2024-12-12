@@ -1,0 +1,22 @@
+version: 4.1.30
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on the "Enter Phone Number" input field.
+    commands:
+      - command: hover-text
+        text: Enter Phone Number
+        description: input field for entering phone number
+        action: click
+  - prompt: Type a test phone number.
+    commands:
+      - command: type
+        text: 1234567890
+  - prompt: >-
+      Assert that the phone number is entered correctly.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: the phone number "1234567890" is visible in the input field
