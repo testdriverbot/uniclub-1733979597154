@@ -1,0 +1,14 @@
+version: 4.1.30
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Assert that the webpage loads successfully.
+    commands:
+      - command: assert
+        expect: NX Wave is visible on the webpage
+  - prompt: >-
+      Assert that the logo is visible.  # Use the content of the file from the
+      environment
+    commands:
+      - command: assert
+        expect: uni logo is visible on the webpage
