@@ -1,0 +1,8 @@
+version: 4.1.30
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Assert that the "PowerUp Money" button is visible.
+    commands:
+      - command: assert
+        expect: the "PowerUp Money" button is visible
